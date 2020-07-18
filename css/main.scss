@@ -18,17 +18,42 @@ body{
 }
 
 h1{
-    text-align: left;
-    font-weight: bold;
+    font-style: italic;
+    font-weight: 400;
     font-size: 20px;
+    img{
+        position: relative;
+        top: 2px;
+        width: 1em;
+    }
 }
 
 h2{
+    padding: 2em;
     font-size: 16px;
 }
 
 h3{
     font-size: 12px;
+}
+
+ul li{
+    display: inline-block;
+}
+
+#navbar{
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+
+.social-media{
+    display: flex;
+    align-items: baseline;
+    .linkedin{width: 2.12em;}
+    .behance{width: 2.1em;}
+    .instagram{width: 2em;}
+    .pinterest{width: 2em;}
 }
 
 img{
@@ -49,6 +74,7 @@ nav ul li{
 }
 
 .contents{
+    padding: 1em 2em;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: 1fr;
@@ -67,6 +93,7 @@ nav ul li{
         min-height:100%
     }
 }
+
 .container:before{
     content: "";
     display: block;
@@ -74,6 +101,7 @@ nav ul li{
     width: 0;
     padding-bottom: 25%;
 }
+
 .overlay {
     position: absolute;
     top: 0;
@@ -91,10 +119,11 @@ nav ul li{
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    a:hover{text-decoration: underline;}
 }
 
 .container:hover .overlay {
-    opacity: 1;
+    opacity: .95;
 }
 
   

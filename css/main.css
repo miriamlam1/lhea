@@ -7,17 +7,59 @@ body {
 }
 
 h1 {
-  text-align: left;
-  font-weight: bold;
+  font-style: italic;
+  font-weight: 400;
   font-size: 20px;
 }
 
+h1 img {
+  position: relative;
+  top: 2px;
+  width: 1em;
+}
+
 h2 {
+  padding: 2em;
   font-size: 16px;
 }
 
 h3 {
   font-size: 12px;
+}
+
+ul li {
+  display: inline-block;
+}
+
+#navbar {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+
+.social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.social-media .linkedin {
+  width: 2.12em;
+}
+
+.social-media .behance {
+  width: 2.1em;
+}
+
+.social-media .instagram {
+  width: 2em;
+}
+
+.social-media .pinterest {
+  width: 2em;
 }
 
 img {
@@ -51,6 +93,7 @@ nav ul li {
 }
 
 .contents {
+  padding: 1em 2em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
@@ -106,7 +149,11 @@ nav ul li {
   text-align: center;
 }
 
+.overlay p a:hover {
+  text-decoration: underline;
+}
+
 .container:hover .overlay {
-  opacity: 1;
+  opacity: .95;
 }
 /*# sourceMappingURL=main.css.map */
