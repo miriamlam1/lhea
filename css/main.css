@@ -44,6 +44,11 @@ ul li {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+  padding: 1em;
+}
+
+.social-media li {
+  padding: .4em;
 }
 
 .social-media .linkedin {
@@ -80,6 +85,11 @@ a:visited {
   color: black;
 }
 
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
 address {
   font-style: normal;
 }
@@ -90,6 +100,20 @@ nav ul li {
 
 .hide {
   display: none;
+}
+
+#sortbar ul li {
+  display: inline;
+  text-transform: capitalize;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5em;
+  cursor: pointer;
+}
+
+li:hover {
+  text-decoration: underline;
 }
 
 .contents {
@@ -186,7 +210,7 @@ footer #personal-info li img {
   top: .35em;
 }
 
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1400px) {
   .contents {
     -ms-grid-columns: (minmax(300px, 1fr))[4];
         grid-template-columns: repeat(4, minmax(300px, 1fr));
