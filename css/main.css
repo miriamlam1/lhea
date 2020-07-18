@@ -156,4 +156,24 @@ nav ul li {
 .container:hover .overlay {
   opacity: .95;
 }
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .list li {
+  display: list-item;
+  text-align: right;
+}
+
+@media only screen and (min-width: 1300px) {
+  .contents {
+    -ms-grid-columns: (minmax(300px, 1fr))[4];
+        grid-template-columns: repeat(4, minmax(300px, 1fr));
+  }
+}
 /*# sourceMappingURL=main.css.map */

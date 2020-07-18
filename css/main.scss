@@ -126,6 +126,22 @@ nav ul li{
     opacity: .95;
 }
 
+footer{
+    display: flex;
+    justify-content: space-around;
+    .list li{
+        display: list-item;
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width: 1300px){
+    .contents{
+        grid-template-columns: repeat(4, minmax(300px, 1fr));
+    }
+}
+
+
   
 
 
