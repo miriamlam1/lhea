@@ -32,8 +32,11 @@
 
     <!-- nav -->
     <nav id="navbar">
-        <a href="#"><img src="images/ham.svg" alt="ham"></a>
-        <ul class="hide">
+        <img src="images/ham.svg" alt="ham" id="menu-icon" class ="hide-desktop">
+        <ul class="hide-mobile show-desktop" id="nav-list">
+            <li id="exit" class="exit-btn hide-desktop">
+                <img src="images/exit.svg" alt="x" id="exit-icon">
+            </li>
             <li><a href="index.html">Portfolio</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact Me!</a></li>
@@ -118,7 +121,8 @@
         <p>&copy Lhea Livings 2020</p>
     </footer>
 
-    <script src="scripts/script.js"></script>
+    <script src="scripts/filter.js"></script>
+    <script src="scripts/mobile.js"></script>
 
 </body>
 
