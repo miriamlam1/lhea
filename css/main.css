@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+h1 {
+  text-align: left;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 12px;
+}
+
+img {
+  max-width: 300px;
+}
+
+ul, ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+address {
+  font-style: normal;
+}
+
+nav ul li {
+  display: inline;
+}
+
+.hide {
+  display: none;
+}
+
+.contents {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-gap: 10px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: gray;
+  position: relative;
+  margin: relative;
+  overflow: hidden;
+}
+
+.container img {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.container:before {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  padding-bottom: 25%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+  background-color: white;
+}
+
+.overlay p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+/*# sourceMappingURL=main.css.map */
