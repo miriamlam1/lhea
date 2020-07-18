@@ -9,7 +9,6 @@
     <title>lhea.design</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="images/tangerine.png">
-    <script src="scripts/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
@@ -46,7 +45,7 @@
         <h1 id="toplogo" class="logo"><a href="index.html">lhea.design
             <img src="images/tangerine.png" alt="">
         </a></h1>
-        <h2>Lhea Livings is a Graphic Designer living and Working in St. George, Utah.</h2>
+        <h2>Lhea Livings is a Graphic Designer living and working in St. George, Utah.</h2>
     </header>
 
     <nav id="sortbar">
@@ -82,101 +81,44 @@
     <hr>
     <!-- footer -->
     <footer>
-        <div>
-            <h1><a href="index.html">lhea.design</a></h1>
-            <!-- social media -->
-            <ul class="social-media">
-                <li><a href="https://www.linkedin.com/in/lhealivings/">
-                    <img src="images/icons8-linkedin-100.svg" alt="linkedin" class="linkedin">
-                </a></li>
-                <li><a href="https://www.behance.net/lhea_design">
-                    <img src="images/icons8-behance-100.svg" alt="behance" class="behance">
-                </a></li>
-                <li><a href="https://www.instagram.com/lhea.design/">
-                    <img src="images/icons8-instagram-100.svg" alt="instagram" class="instagram">
-                </a></li>
-                <li><a href="https://www.pinterest.com/lhea_design/">
-                    <img src="images/icons8-pinterest-100.svg" alt="pinterest" class="pinterest">
-                </a></li>
-            </ul>
+        <div class="section">
+            <div>
+                <h1><a href="index.html">lhea.design</a></h1>
+                <!-- social media -->
+                <ul class="social-media">
+                    <li><a href="https://www.linkedin.com/in/lhealivings/">
+                        <img src="images/icons8-linkedin-100.svg" alt="linkedin" class="linkedin">
+                    </a></li>
+                    <li><a href="https://www.behance.net/lhea_design">
+                        <img src="images/icons8-behance-100.svg" alt="behance" class="behance">
+                    </a></li>
+                    <li><a href="https://www.instagram.com/lhea.design/">
+                        <img src="images/icons8-instagram-100.svg" alt="instagram" class="instagram">
+                    </a></li>
+                    <li><a href="https://www.pinterest.com/lhea_design/">
+                        <img src="images/icons8-pinterest-100.svg" alt="pinterest" class="pinterest">
+                    </a></li>
+                </ul>
+            </div>
+            <div>
+                <ul id="personal-info">
+                    <li><img src="images/phone.png" alt=""><b>call</b> +1 435 669 7237</li>
+                    <li><img src="images/mail.png" alt=""><b>email</b> hello@lhea.design</li>
+                    <li><img src="images/pin.png" alt=""><b>located</b> St.George, Utah, United States</li>
+                </ul>
+            </div>
+            <div>
+                <ul id="footer-nav">
+                    <li><a href="index.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Me!</a></li>
+                </ul>
+            </div>
         </div>
-        <div>
-            <ul id="personal-info">
-                <li><img src="images/phone.png" alt=""><b>call</b> +1 435 669 7237</li>
-                <li><img src="images/mail.png" alt=""><b>email</b> hello@lhea.design</li>
-                <li><img src="images/pin.png" alt=""><b>located</b> St.George, Utah, United States</li>
-            </ul>
-        </div>
-        <div>
-            <ul id="footer-nav">
-                <li><a href="index.html">Portfolio</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact Me!</a></li>
-            </ul>
-        </div>
+        <p>&copy Lhea Livings 2020</p>
     </footer>
 
-    <!-- scripts should move to file soon -->
-    <script>
-        $(document).ready(function() {
-            console.log( "ready!" );
-        });
-
-        var sorting_array = ['interface-design','branding','typography','other'];
-        var clicked;
-
-        function filtering(clicked){
-            var i;
-            for (i=0; i<sorting_array.length; i++){
-                if (clicked == 'everything'){
-                    var elems= document.getElementsByClassName(sorting_array[i]);
-                    for (var j=0;j<elems.length;j++){
-                        elems[j].style.display = 'flex';
-                        console.log(elems.length);
-                    }
-                }
-                else if (clicked != sorting_array[i]){
-                    var elems= document.getElementsByClassName(sorting_array[i]);
-                    for (var j=0;j<elems.length;j++){
-                        elems[j].style.display = 'none';
-                        console.log(elems.length);
-                    }
-                }
-                else if (clicked == sorting_array[i]){
-                    var elems= document.getElementsByClassName(clicked);
-                    for (var j=0;j<elems.length;j++){
-                        elems[j].style.display = 'flex';
-                        console.log(elems.length);
-                    }
-                }
-            }
-        }
-
-        $('#everything').click(function (){
-            clicked='everything';
-            filtering(clicked);
-        });
-
-        $('#interface-design').click(function (){
-            clicked='interface-design';
-            filtering(clicked);
-        });
-
-        $('#branding').click(function (){
-            clicked='branding';
-            filtering(clicked);
-        });
-
-        $('#typography').click(function (){
-            clicked='typography';
-            filtering(clicked);
-        });
-
-        $('#other').click(function (){
-            clicked='other';
-            filtering(clicked);
-        });
-    </script>
+    <script src="scripts/script.js"></script>
 
 </body>
 

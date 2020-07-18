@@ -185,7 +185,7 @@ hr {
   border: 1px solid gray;
 }
 
-footer {
+footer .section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -193,21 +193,27 @@ footer {
       justify-content: space-around;
 }
 
-footer ul li {
+footer .section ul li {
   padding: .3em;
   display: list-item;
   text-align: right;
 }
 
-footer #personal-info li {
+footer .section #personal-info li {
   text-align: left;
 }
 
-footer #personal-info li img {
+footer .section #personal-info li img {
   width: 1.4em;
   padding-right: .8em;
   position: relative;
   top: .35em;
+}
+
+footer p {
+  text-align: left;
+  margin-left: 1em;
+  color: gray;
 }
 
 @media only screen and (min-width: 1400px) {

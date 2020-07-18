@@ -147,7 +147,7 @@ hr {
     border: 1px solid color(accent);
 }
 
-footer{
+footer .section{
     display: flex;
     justify-content: space-around;
 
@@ -166,6 +166,12 @@ footer{
         }
         text-align: left;
     }
+}
+
+footer p {
+    text-align: left;
+    margin-left: 1em;
+    color: color(accent)
 }
 
 @media only screen and (min-width: 1400px){
