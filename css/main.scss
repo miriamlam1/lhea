@@ -23,7 +23,7 @@ h1{
     font-size: 20px;
     img{
         position: relative;
-        top: 2px;
+        top: .15em;
         width: 1em;
     }
 }
@@ -126,12 +126,28 @@ nav ul li{
     opacity: .95;
 }
 
+hr {
+    border: 1px solid color(accent);
+}
+
 footer{
     display: flex;
     justify-content: space-around;
-    .list li{
+
+    ul li{
+        padding: .3em;
         display: list-item;
         text-align: right;
+    }
+
+    #personal-info li{
+        img{
+            width: 1.4em;
+            padding-right: .8em;
+            position: relative;
+            top: .35em;
+        }
+        text-align: left;
     }
 }
 
