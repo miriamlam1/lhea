@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -28,6 +30,7 @@ h1 img {
 }
 
 h2 {
+  font-weight: 500;
   padding: 2em;
   font-size: 16px;
 }
@@ -96,10 +99,6 @@ ul li {
   width: 2em;
 }
 
-img {
-  max-width: 250px;
-}
-
 ul, ol {
   list-style-type: none;
   padding: 0;
@@ -137,7 +136,7 @@ address {
   cursor: pointer;
 }
 
-li:hover {
+nav li:hover {
   text-decoration: underline;
 }
 
@@ -163,8 +162,10 @@ li:hover {
 }
 
 .container img {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  max-width: 250px;
+  max-height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
   min-width: 100%;
   min-height: 100%;
 }
@@ -216,7 +217,8 @@ footer .section ul li {
 }
 
 footer .section h1 {
-  padding-top: .5em;
+  padding-top: .6em;
+  margin-bottom: 0;
 }
 
 footer .section #personal-info li {
@@ -231,14 +233,82 @@ footer .section #personal-info li img {
 }
 
 footer .section #footer-nav li {
-  padding: .5em;
+  margin-top: .12em;
+  padding: .52em;
+}
+
+footer .section .social-media {
+  margin: 0;
+  padding: 1em;
 }
 
 footer .copyright {
   text-align: left;
-  margin-left: 2em;
+  padding: 1em;
   color: gray;
   font-size: smaller;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  max-width: 75%;
+  margin: auto;
+  padding: 1em;
+}
+
+.about img {
+  height: 300px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about ul {
+  list-style-type: circle;
+}
+
+input[type=text], select, textarea {
+  font-family: 'Roboto', sans-serif;
+  background-color: #eeeeee;
+  width: 97%;
+  padding: 12px;
+  border: 0;
+  border-radius: 5px;
+  margin: 5px 0 5px 0;
+  resize: vertical;
+}
+
+input[type=submit] {
+  margin: 2em;
+  background-color: #282828;
+  color: white;
+  width: 34%;
+  padding: 1em;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: gray;
+}
+
+form {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 1em;
+}
+
+h3 {
+  text-align: left;
+  font-size: x-large;
+  font-weight: 900;
+  margin: 0 0 0 .2em;
 }
 
 @media only screen and (min-width: 700px) {
@@ -260,9 +330,18 @@ footer .copyright {
     display: -ms-flexbox;
     display: flex;
   }
-  ul li {
+  nav ul li {
     display: inline-block;
     padding: 1em 2em 0 0;
+  }
+  body {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 29px;
+  }
+  h2 {
+    font-size: 20px;
   }
 }
 

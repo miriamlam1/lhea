@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 
 $colors: (
     backgnd: white,
     accent: gray,
+    accent-bgnd: rgb(238, 238, 238),
+    dark: #282828,
     txt: black
 );
 
@@ -38,6 +43,7 @@ h1{
 }
 
 h2{
+    font-weight: 500;
     padding: 2em;
     font-size: 16px;
 }
@@ -88,10 +94,6 @@ ul li{
     .pinterest{width: 2em;}
 }
 
-img{
-    max-width: 250px;
-}
-
 ul, ol{list-style-type: none; padding: 0;}
 a{text-decoration: none;}
 a:visited{text-decoration: none; color:color(txt);}
@@ -110,7 +112,7 @@ address{font-style: normal;}
     cursor: pointer;
 }
 
-li:hover{
+nav li:hover{
     text-decoration: underline;
 }
 
@@ -129,9 +131,11 @@ li:hover{
     margin: relative;
     overflow: hidden;
     img{
-        flex-shrink:0;
+        max-width: 250px;
+        max-height: 250px;
+        object-fit: cover;
         min-width:100%;
-        min-height:100%
+        min-height:100%;
     }
 }
 
@@ -172,14 +176,14 @@ hr {
 }
 
 footer .section{
-    
     ul li{
         padding: .3em;
         display: list-item;
     }
 
     h1{
-        padding-top: .5em;
+        padding-top: .6em;
+        margin-bottom: 0;
     }
 
     #personal-info li{
@@ -193,16 +197,82 @@ footer .section{
     }
 
     #footer-nav li{
-        padding: .5em;
+        margin-top: .12em;
+        padding: .52em;
+    }
+
+    .social-media{
+        margin: 0;
+        padding: 1em;
     }
 }
 
 footer .copyright {
     text-align: left;
-    margin-left: 2em;
+    padding: 1em;
     color: color(accent);
     font-size: smaller;
 }
+// about stuff ----------------
+
+.about{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 75%;
+    margin: auto;
+    padding: 1em;
+    img {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+    ul{
+        list-style-type: circle;
+    }
+}
+
+// contact page stuff --------- 
+
+input[type=text], select, textarea{
+    font-family: 'Roboto', sans-serif;
+    background-color: color(accent-bgnd);
+    width: 97%;
+    padding: 12px;
+    border: 0;
+    border-radius: 5px;
+    margin: 5px 0 5px 0;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    margin: 2em;
+    background-color: color(dark);
+    color: white;
+    width: 34%;
+    padding: 1em;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: color(accent);
+  }
+
+  form{
+      max-width: 1000px;
+    margin: auto;
+    padding: 0 1em;
+  }
+
+  h3 {
+    text-align: left;
+    font-size: x-large;
+    font-weight: 900;
+    margin: 0 0 0 .2em;
+  }
+
+// ------ end contact page stuff
 
 @media only screen and (min-width: 700px){
     footer .section{
@@ -218,10 +288,17 @@ footer .copyright {
     .show-desktop{
         display:flex;
     }
-    ul li{
+    nav ul li{
         display: inline-block;
         padding: 1em 2em 0 0;
     }
+
+    //size adjustments
+    body{
+        font-size: 20px;
+    }
+    h1{font-size: 29px;}
+    h2{font-size: 20px;}
 }
 
 @media only screen and (min-width: 1350px){
