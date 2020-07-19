@@ -10,6 +10,11 @@ $colors: (
     @return map-get($colors,$color-name);
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
     background-color: color(backgnd);
@@ -45,13 +50,22 @@ ul li{
     display: inline-block;
 }
 
-#navbar{
+#navbar {
     position: absolute;
     right: 1em;
     top: 1em;
-    img:hover{
-        cursor: pointer;
-    }
+}
+
+.cover{
+    position: fixed;
+    top:0;
+    background-color:red;
+    left:0;
+    bottom:0;
+    right:0;
+    height:100%;
+    width:100%;
+    z-index: 1; //put on top
 }
 
 .social-media{
@@ -178,7 +192,7 @@ footer p {
     color: color(accent)
 }
 
-@media only screen and (min-width: 500px){
+@media only screen and (min-width: 700px){
     footer .section{
         display: flex;
         justify-content: space-around;

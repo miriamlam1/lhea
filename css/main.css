@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: 'Roboto', sans-serif;
   background-color: white;
   color: black;
@@ -41,8 +46,16 @@ ul li {
   top: 1em;
 }
 
-#navbar img:hover {
-  cursor: pointer;
+.cover {
+  position: fixed;
+  top: 0;
+  background-color: red;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
 }
 
 .social-media {
@@ -215,7 +228,7 @@ footer p {
   color: gray;
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 700px) {
   footer .section {
     display: -webkit-box;
     display: -ms-flexbox;
