@@ -1,5 +1,4 @@
 //mobile.js
-
 var nav = document.getElementById('nav-list');
 
 $('#menu-icon').click(function (){

@@ -5,7 +5,8 @@ $(document).ready(function() {
 });
 
 var sorting_array = ['everything','interface-design','branding','typography','other'];
-var clicked;
+var clicked = 'everything';
+filtering(clicked);
 
 function filtering_help(element, toDisplay){
     var elems= document.getElementsByClassName(element);

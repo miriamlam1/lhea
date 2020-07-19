@@ -37,13 +37,21 @@ h3 {
 }
 
 ul li {
-  display: inline-block;
+  display: list-item;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 #navbar {
   position: absolute;
   right: 1em;
   top: 1em;
+}
+
+#navbar ul li {
+  text-align: right;
 }
 
 .cover {
@@ -113,10 +121,6 @@ a:link {
 
 address {
   font-style: normal;
-}
-
-nav ul li {
-  display: inline;
 }
 
 .hide {
@@ -211,6 +215,10 @@ footer .section ul li {
   display: list-item;
 }
 
+footer .section h1 {
+  padding-top: .5em;
+}
+
 footer .section #personal-info li {
   text-align: left;
 }
@@ -222,10 +230,15 @@ footer .section #personal-info li img {
   top: .35em;
 }
 
-footer p {
+footer .section #footer-nav li {
+  padding: .5em;
+}
+
+footer .copyright {
   text-align: left;
-  margin-left: 1em;
+  margin-left: 2em;
   color: gray;
+  font-size: smaller;
 }
 
 @media only screen and (min-width: 700px) {
@@ -247,9 +260,13 @@ footer p {
     display: -ms-flexbox;
     display: flex;
   }
+  ul li {
+    display: inline-block;
+    padding: 1em 2em 0 0;
+  }
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1350px) {
   .contents {
     -ms-grid-columns: (minmax(300px, 1fr))[4];
         grid-template-columns: repeat(4, minmax(300px, 1fr));

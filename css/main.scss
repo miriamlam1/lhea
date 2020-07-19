@@ -47,13 +47,20 @@ h3{
 }
 
 ul li{
-    display: inline-block;
+    display: list-item;
+}
+
+.underline{
+    text-decoration: underline;
 }
 
 #navbar {
     position: absolute;
     right: 1em;
     top: 1em;
+    ul li{
+        text-align: right;
+    }
 }
 
 .cover{
@@ -90,10 +97,6 @@ a{text-decoration: none;}
 a:visited{text-decoration: none; color:color(txt);}
 a:link{text-decoration: none; color:color(txt);}
 address{font-style: normal;}
-
-nav ul li{
-    display: inline;
-}
 
 .hide{
     display: none;
@@ -169,10 +172,14 @@ hr {
 }
 
 footer .section{
-
+    
     ul li{
         padding: .3em;
         display: list-item;
+    }
+
+    h1{
+        padding-top: .5em;
     }
 
     #personal-info li{
@@ -184,12 +191,17 @@ footer .section{
         }
         text-align: left;
     }
+
+    #footer-nav li{
+        padding: .5em;
+    }
 }
 
-footer p {
+footer .copyright {
     text-align: left;
-    margin-left: 1em;
-    color: color(accent)
+    margin-left: 2em;
+    color: color(accent);
+    font-size: smaller;
 }
 
 @media only screen and (min-width: 700px){
@@ -206,20 +218,19 @@ footer p {
     .show-desktop{
         display:flex;
     }
+    ul li{
+        display: inline-block;
+        padding: 1em 2em 0 0;
+    }
 }
 
-@media only screen and (min-width: 1400px){
+@media only screen and (min-width: 1350px){
     .contents{
         grid-template-columns: repeat(4, minmax(300px, 1fr));
     }
     
 }
 
-// @media only screen and (min-width: 1500px){
-//     .contents{
-//         padding: 3em 30em;
-//     }
-// }
 
 
 
