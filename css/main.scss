@@ -64,15 +64,29 @@ ul li{
     position: absolute;
     right: 1em;
     top: 1em;
-    ul li{
-        text-align: right;
+    img{
+        position: relative;
+        right: 1em;
+        top: 1em;
+        z-index: 2;
     }
+    ul{
+        li{
+        top: 2em;
+        padding: 2em;
+        position: relative;
+        text-align: right;
+        z-index: 2;
+    }}
 }
 
 .cover{
+    margin: 0;
+    opacity: 96%;
     position: fixed;
     top:0;
-    background-color:red;
+    background: url("../images/portfolio-item.jpg"), white;
+    background-repeat: no-repeat;
     left:0;
     bottom:0;
     right:0;
@@ -104,12 +118,20 @@ address{font-style: normal;}
     display: none;
 }
 
-#sortbar ul li{
-    display: inline;
+#sortbar {
     text-transform: capitalize;
-    justify-content: space-between;
-    padding: 1.5em;
-    cursor: pointer;
+    text-align: center;
+    ul {
+        padding: 1em;
+        display: flex;
+        justify-content: space-evenly;
+        max-width: 1000px;
+        margin: auto;
+        a:hover {
+            background-color: pink;
+            color: color(darker);
+        }
+    }
 }
 
 nav li:hover{
@@ -117,33 +139,20 @@ nav li:hover{
 }
 
 .container{
-    padding: 3em 0;
+    padding: 1em;
     margin: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
 }
 
-SquareGrid{
-    // The content width you use on your website
-    --content-width: 80vw;
-    // The size of the gutter  
-    --gutter: 40px;
-    // The amount of columns
-    --columns: 1;
-    // This is the calculation for the row height.
-    --row-size: calc(
-      ( var(--content-width) - (var(--gutter) * (var(--columns) - 1))
-      ) / var(--columns)
-    );
-    
+Squaregrid{
     display: grid;
-  
+    --columns: 1;
     width: 100%;
     max-width: 80vw;
     grid-template-columns: repeat(var(--columns), 1fr);
-    grid-auto-rows: var(--row-size);
+    grid-auto-rows: calc(
+        (80vw - ((var(--columns) - 1)* 10px)) / var(--columns));
     grid-gap:10px;
   }
 
@@ -194,6 +203,7 @@ SquareGrid{
 }
 
 hr {
+    margin: 4em 1em 0 1em;
     border: 1px solid color(accent);
 }
 
@@ -238,63 +248,103 @@ footer .copyright {
 // about stuff ----------------
 
 .about{
-    display: flex;
+    text-align: left;
+    h2{
+        padding: 0;
+    }
     justify-content: space-evenly;
     max-width: 75%;
     margin: auto;
     padding: 1em;
     img {
-        height: 300px;
-        width: 100%;
-        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        padding: 0 0 2em 0;
     }
     ul{
+        padding: 1em;
         list-style-type: circle;
+        list-style-position:inside;
     }
+
 }
 
 // contact page stuff --------- 
 
 input[type=text], select, textarea{
+    font-size: medium;
     font-family: 'Roboto', sans-serif;
     background-color: color(accent-bgnd);
-    width: 97%;
+    width: 100%;
     padding: 12px;
     border: 0;
     border-radius: 5px;
     margin: 5px 0 5px 0;
     resize: vertical;
-  }
-  
-  input[type=submit] {
-    margin: 2em;
+}
+
+.pushleft{
+    display:flex;
+    justify-content: left;
+}
+
+input[type=submit] {
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
     background-color: color(dark);
     color: white;
-    width: 34%;
-    padding: 1em;
+    min-width: 34%;
+    padding: 12px;
+    margin: 1em 0 0 0;
     border: none;
     border-radius: 2px;
     cursor: pointer;
-  }
-  
-  input[type=submit]:hover {
+}
+
+input[type=submit]:hover {
     background-color: color(accent);
-  }
+}
 
-  form{
-      max-width: 1000px;
+form{
+    max-width: 1000px;
     margin: auto;
-    padding: 0 1em;
-  }
+    padding: 1em 2.5em 1em 1em;
+    display: block;
+}
 
-  h3 {
+h3 {
     text-align: left;
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: 900;
-    margin: 0 0 0 .2em;
   }
 
 // ------ end contact page stuff
+
+// project page
+.project{
+    .bottomtext{
+        display: flex;
+        justify-content: center;
+        padding: 1em;
+    }
+    img{
+        width: 90vw;
+        display: block;
+        margin: auto;
+        padding: .3em;
+    }
+    figcaption{
+        text-align: left;
+    }
+    nav{
+        ul{
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+}
 
 @media only screen and (min-width: 700px){
     footer .section{
@@ -321,15 +371,47 @@ input[type=text], select, textarea{
     }
     h1{font-size: 29px;}
     h2{font-size: 20px;}
+    .project{
+        img{
+            width: 50vw;
+        }
+    }
+
+    #navbar {
+        position: absolute;
+        right: 1em;
+        top: 1em;
+        img{
+            position: absolute;
+            right: 1em;
+            top: 1em;
+        }
+        ul li{
+            top: 0;
+            padding: 1em 1em;
+        }
+
+}}
+
+@media only screen and (min-width: 950px){
     SquareGrid{
         --columns: 3;
+    }
+    .about{
+        display: flex;
+        align-items: flex-start;
+        img{
+            padding: 2em;
+            width: 30vw;
+            object-fit: contain;
+        }
     }
 }
 
 @media only screen and (min-width: 1350px){
-    SquareGrid{
+    Squaregrid{
         --columns: 4;
-      }
+    }
 }
 
 
